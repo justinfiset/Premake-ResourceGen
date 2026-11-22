@@ -1,0 +1,24 @@
+{
+    "$schema": "https://raw.githubusercontent.com/LuaLS/vscode-lua/master/setting/schema.json",
+    "runtime.version": "Lua 5.3",
+    "workspace.checkThirdParty": false,
+    "diagnostics.globals": [
+        "_SCRIPT_DIR",
+        "_MAIN_SCRIPT_DIR",
+        "_ACTION",
+        "_OPTIONS",
+        "_PREMAKE_VERSION",
+        "newaction",
+        "newoption",
+        "include",
+        "path",
+        "os",
+        "io",
+        "table",
+        "string",
+        "workspace",
+        "project",
+        "filter",
+        "prebuildcommands"
+    ]
+}

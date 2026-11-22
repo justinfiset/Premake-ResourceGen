@@ -1,0 +1,30 @@
+name: Tests
+
+on:
+    push:
+    pull_request:
+
+jobs:
+    tests:
+        name: Run tests
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+
+            - name: Install Premake
+              run: |
+                  curl -L \
+                    https://github.com/premake/premake-core/releases/download/v5.0.0/premake-5.0.0-linux.tar.gz \
+                    -o premake.tar.gz
+
+                  tar -xzf premake.tar.gz
+                  chmod +x premake5
+                  sudo mv premake5 /usr/local/bin/premake5
+
+            - name: Check Premake version
+              run: premake5 --version
+
+            - name: Run tests
+              run: premake5 --file=Tests/premake5.lua test
