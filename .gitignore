@@ -1,3 +1,6 @@
+# Test output
+Tests/.tmp/
+
 # Compiled Lua sources
 luac.out
 
